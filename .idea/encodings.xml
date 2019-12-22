@@ -2,9 +2,18 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_activiti" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hbs_common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hbs_eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_common_model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_company" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_employee" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_eureka_6866" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_eureka_6867" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_eureka_6868" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_organization" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hbs_recruitment" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hbs_user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_system" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hbs_web" charset="UTF-8" />
   </component>
 </project>

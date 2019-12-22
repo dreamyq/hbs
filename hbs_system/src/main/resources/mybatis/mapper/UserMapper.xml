@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.codemodel.system.dao.UserDao">
+    <resultMap id="baseMap" type="cn.codemodel.common.model.entity.system.User">
+        <id column="id" property="id"/>
+        <result column="mobile" property="mobile"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="enable_state" property="enableState"/>
+        <result column="create_time" property="createTime"/>
+        <result column="time_of_entry" property="timeOfEntry"/>
+        <result column="form_of_employment" property="formOfEmployment"/>
+        <result column="work_number" property="workNumber"/>
+        <result column="form_of_management" property="formOfManagement"/>
+        <result column="working_city" property="workingCity"/>
+        <result column="correction_time" property="correctionTime"/>
+        <result column="in_service_status" property="inServiceStatus"/>
+        <result column="company_id" property="companyId"/>
+        <result column="company_name" property="companyName"/>
+        <result column="department_id" property="departmentName"/>
+        <result column="department_name" property="departmentName"/>
+        <result column="level" property="level"/>
+        <result column="staff_photo" property="staffPhoto"/>
+    </resultMap>
+    <resultMap id="lazyLoadRoles" type="cn.codemodel.common.model.entity.system.User" extends="baseMap">
+        <collection property="roles" ofType="cn.codemodel.common.model.entity.system.Role" select="cn.codemodel.system.dao.UserDao.getRolesByUserId"
+                    column="id">
+        </collection>
+    </resultMap>
+    <resultMap id="eagerLoadRoles" type="cn.codemodel.common.model.entity.system.User" extends="baseMap">
+        <collection property="roles" ofType="cn.codemodel.common.model.entity.system.Role">
+            <id property="id" column="id"/>
+            <result property="name" column="name"/>
+            <result property="description" column="description"/>
+            <result property="companyId" column="company_id"/>
+        </collection>
+    </resultMap>
+
+
+    <resultMap id="lazyLoadPermission" type="cn.codemodel.common.model.entity.system.Role" extends="lazyLoadRoles">
+        <collection property="permissions" ofType="cn.codemodel.common.model.entity.system.Permission" select="cn.codemodel.system.dao.PermissionDao.findPermissionByRoleId"
+                    column="id">
+        </collection>
+    </resultMap>
+    <delete id="deleteByUserRole">
+        DELETE  FROM pe_user_role where user_id = #{userId}
+    </delete>
+
+    <select id="findByName" resultMap="lazyLoadRoles">
+        select * from bs_user where mobile=#{username}
+    </select>
+    <select id="getRolesByUserId" resultType="cn.codemodel.common.model.entity.system.Role">
+        SELECT pr.* FROM pe_user_role pur,pe_role pr where pur.role_id=pr.id AND pur.user_id=#{id}
+    </select>
+    <insert id="addRolesForUser">
+        INSERT INTO pe_user_role(role_id,user_id) VALUES
+        <foreach collection="roles" separator="," item="rid">
+            (#{rid},#{userId})
+        </foreach>
+    </insert>
+</mapper>

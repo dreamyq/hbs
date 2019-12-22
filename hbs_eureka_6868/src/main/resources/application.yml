@@ -1,0 +1,13 @@
+server:
+  port: 6868
+eureka:
+  instance:
+    hostname: eureka6868.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka6867.com:6867/eureka/,http://eureka6866.com:6866/eureka/
+spring:
+  application:
+    name: hbs-eureka-6868

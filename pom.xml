@@ -10,9 +10,18 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>hbs_common</module>
-        <module>hbs_user</module>
         <module>hbs_recruitment</module>
-        <module>hbs_eureka</module>
+        <module>hbs_eureka_6868</module>
+        <module>hbs_eureka_6867</module>
+        <module>hbs_eureka_6866</module>
+        <module>hbs_organization</module>
+        <module>hbs_common_model</module>
+        <module>hbs_company</module>
+        <module>hbs_web</module>
+        <module>hbs_system</module>
+        <module>hbs_employee</module>
+        <module>hbs_activiti</module>
+        <module>hbs_sms</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,6 +34,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <fastjson.version>1.2.47</fastjson.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -49,20 +59,18 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.10</version>
+            <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+
+
     </dependencies>
 
     <repositories>

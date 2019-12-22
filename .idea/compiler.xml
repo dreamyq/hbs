@@ -2,24 +2,58 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hbs_common" />
         <module name="hbs_recruitment" />
-        <module name="hbs_user" />
-        <module name="hbs_eureka" />
+        <module name="hbs_system" />
+        <module name="hbs_sms" />
+        <module name="hbs_organization" />
+        <module name="hbs_web" />
+        <module name="hbs_activiti" />
+        <module name="hbs_common" />
+        <module name="hbs_eureka_6868" />
+        <module name="hbs_eureka_6867" />
+        <module name="hbs_eureka_6866" />
+        <module name="hbs_employee" />
+        <module name="hbs_common_model" />
+        <module name="hbs_company" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hbs" target="1.8" />
+      <module name="hbs_activiti" target="1.8" />
+      <module name="hbs_common" target="1.8" />
+      <module name="hbs_common_model" target="1.8" />
+      <module name="hbs_company" target="1.8" />
+      <module name="hbs_employee" target="1.8" />
+      <module name="hbs_eureka_6866" target="1.8" />
+      <module name="hbs_eureka_6867" target="1.8" />
+      <module name="hbs_eureka_6868" target="1.8" />
+      <module name="hbs_organization" target="1.8" />
+      <module name="hbs_recruitment" target="1.8" />
+      <module name="hbs_sms" target="1.8" />
+      <module name="hbs_system" target="1.8" />
+      <module name="hbs_web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="hbs" options="-parameters" />
+      <module name="hbs_activiti" options="-parameters" />
       <module name="hbs_common" options="-parameters" />
-      <module name="hbs_eureka" options="-parameters" />
+      <module name="hbs_common_model" options="-parameters" />
+      <module name="hbs_company" options="-parameters" />
+      <module name="hbs_employee" options="-parameters" />
+      <module name="hbs_eureka_6866" options="-parameters" />
+      <module name="hbs_eureka_6867" options="-parameters" />
+      <module name="hbs_eureka_6868" options="-parameters" />
+      <module name="hbs_organization" options="-parameters" />
       <module name="hbs_recruitment" options="-parameters" />
-      <module name="hbs_user" options="-parameters" />
+      <module name="hbs_sms" options="-parameters" />
+      <module name="hbs_system" options="-parameters" />
+      <module name="hbs_web" options="-parameters" />
     </option>
   </component>
 </project>

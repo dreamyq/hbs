@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.codemodel.recruitment.dao.ExamDao">
+    <resultMap id="descMap" type="cn.codemodel.recruitment.model.entity.Exam">
+        <id column="exam_id" property="examId"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="scroe" property="score"/>
+        <result column="create_time" property="createTime"/>
+        <result column="edit_time" property="editTime"/>
+    </resultMap>
+
+    <select id="getExamDesc" resultMap="descMap">
+        SELECT * FROM tb_exam
+        ORDER BY create_time DESC
+    </select>
+</mapper>

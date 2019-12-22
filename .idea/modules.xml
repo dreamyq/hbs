@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/hbs.iml" filepath="$PROJECT_DIR$/.idea/hbs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_activiti/hbs_activiti.iml" filepath="$PROJECT_DIR$/hbs_activiti/hbs_activiti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_common/hbs_common.iml" filepath="$PROJECT_DIR$/hbs_common/hbs_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_common_model/hbs_common_model.iml" filepath="$PROJECT_DIR$/hbs_common_model/hbs_common_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_company/hbs_company.iml" filepath="$PROJECT_DIR$/hbs_company/hbs_company.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_employee/hbs_employee.iml" filepath="$PROJECT_DIR$/hbs_employee/hbs_employee.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_eureka_6866/hbs_eureka_6866.iml" filepath="$PROJECT_DIR$/hbs_eureka_6866/hbs_eureka_6866.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_eureka_6867/hbs_eureka_6867.iml" filepath="$PROJECT_DIR$/hbs_eureka_6867/hbs_eureka_6867.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_eureka_6868/hbs_eureka_6868.iml" filepath="$PROJECT_DIR$/hbs_eureka_6868/hbs_eureka_6868.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_organization/hbs_organization.iml" filepath="$PROJECT_DIR$/hbs_organization/hbs_organization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_recruitment/hbs_recruitment.iml" filepath="$PROJECT_DIR$/hbs_recruitment/hbs_recruitment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_sms/hbs_sms.iml" filepath="$PROJECT_DIR$/hbs_sms/hbs_sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_system/hbs_system.iml" filepath="$PROJECT_DIR$/hbs_system/hbs_system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hbs_web/hbs_web.iml" filepath="$PROJECT_DIR$/hbs_web/hbs_web.iml" />
+    </modules>
+  </component>
+</project>

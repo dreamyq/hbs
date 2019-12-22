@@ -1,0 +1,31 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: hbs-web
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka6866.com:6866/eureka/,http://eureka6867.com:6867/eureka/,http://eureka6868.com:6868/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    hbs-company:
+      path: /company/**
+      serviceId: hbs-company
+      sensitiveHeaders: "*"
+    hbs-system:
+      path: /system/**
+      serviceId: hbs-system
+      sensitiveHeaders: "*"
+    hbs-recruitment:
+      path: /recruitment/**
+      serviceId: hbs-recruitment
+      sensitiveHeaders: "*"
+  host:
+    connect-timeout-millis: 20000000
+  sensitive-headers: Set-Cookie、Cookie、Host、Connection、Content-Length、Content-Encoding、Server、Transfer-Encoding、X-Application-Context
+ribbon:
+  ReadTimeout: 120000  #请求处理的超时时间
+  ConnectTimeout: 30000  #请求连接的超时时间

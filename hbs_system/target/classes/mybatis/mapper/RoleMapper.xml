@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.codemodel.system.dao.RoleDao">
+    <resultMap id="baseMap" type="cn.codemodel.common.model.entity.system.Role">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="description" property="description"/>
+        <result column="company_id" property="companyId"/>
+    </resultMap>
+    <resultMap id="lazyLoadPermission" type="cn.codemodel.common.model.entity.system.Role" extends="baseMap">
+        <collection property="permissions" ofType="cn.codemodel.common.model.entity.system.Permission" select="cn.codemodel.system.dao.RoleDao.getRolesByUserId"
+                    column="id">
+        </collection>
+    </resultMap>
+    <insert id="addPermissionForRole">
+        INSERT INTO pe_role_permission(role_id,permission_id) VALUES
+        <foreach collection="permissions" separator="," item="pid">
+            (#{roleId},#{pid})
+        </foreach>
+    </insert>
+    <delete id="deleteRoleAndPermission">
+        DELETE FROM pe_role_permission WHERE role_id = #{roleId}
+    </delete>
+    <select id="getRolesByUserId" resultType="cn.codemodel.common.model.entity.system.Permission">
+        SELECT pp.* FROM pe_role_permission prp,pe_permission pp WHERE prp.permission_id=pp.id AND prp.role_id=#{id}
+    </select>
+    <select id="findById" resultMap="lazyLoadPermission">
+        SELECT * FROM pe_role WHERE id=#{roleId}
+    </select>
+
+</mapper>

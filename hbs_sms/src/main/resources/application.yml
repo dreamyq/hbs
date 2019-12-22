@@ -1,0 +1,14 @@
+server:
+  port: 9005
+spring:
+  application:
+    name: hbs-sms
+  rabbitmq:
+    host: 39.105.51.126
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka6866.com:6866/eureka/,http://eureka6867.com:6867/eureka/,http://eureka6868.com:6868/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: hbs-sms
